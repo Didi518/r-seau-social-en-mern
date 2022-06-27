@@ -4,6 +4,8 @@ const userController = require('../controllers/user.controller');
 
 // auth
 router.post('/inscription', authController.signUp);
+router.post('/connexion', authController.signIn);
+router.get('/deconnexion', authController.logout);
 
 // user db
 router.get('/', userController.getAllUsers);
